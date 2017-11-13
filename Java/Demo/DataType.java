@@ -12,7 +12,7 @@ public class DataType{
 	static double da ;
 	static char ca ;
 	static boolean boa ;
-	static Person p ;
+	static Person per ;
 
 	public static void main(String[] args) {
 		//@基本类型
@@ -74,25 +74,15 @@ public class DataType{
 		System.out.println("数据溢出Byte.MIN_VALUE - 1 = " + (byte)(byteMinVaule - 1)) ;
 		System.out.println("数据移除Byte.byteMaxVaule + 1 = " + (byte)(byteMaxVaule + 1)) ;
 		//@引用类型		
-		System.out.println("引用类型的默认值为：" + p ) ;
-		//@运算符
+		System.out.println("引用类型的默认值为：" + per ) ;
+		//@自动转换
+		//int >> 自动转换
 		int a = 10 ;
-		int b = 10 ;
-		//a++ 先运算，后自增
- 		System.out.println("2*a++   = " +  (2+a++) );
- 		System.out.println(a);
- 		//++b 先自增，再运算
-    	System.out.println("2*++b   = " +  (2+(++b)) );
-    	System.out.println(b);
-    	//短路与的问题
-    	System.out.println("使用短路与&&，(1 > 2) && (10/0 == 0)" + ((1 > 2)&&(10/0 == 0)));
-		//以下代码出错
-		//System.out.println("使用短路与&，(1 > 2) & (10/0 == 0)" + ((1 > 2)&(10/0 == 0)));
-    	//赋值运算符
-    	int m = 10 ;
-    	int n = 15 ;
-    	int j = 20 ;
-    	System.out.println();
-
+		double b = a ;
+		System.out.println("b为：" + b);
+		// double>>int 强制转换
+		int c = (int)b ;
+		System.out.println("c为：" + c);	
+		
 	}
 }
